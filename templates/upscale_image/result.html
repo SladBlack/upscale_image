@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container display-images">
+    <div class="row">
+
+        <div class="col-lg-6 d-flex justify-content-between offset-lg-3 ">
+            <div class="wrapper animate__animated animate__fadeInLeft">
+                <h4 class="image-description">Source Image</h4>
+                <img width="256" height="256" src="{{ url_for('static', path='images/source.png') }}"
+                     alt="source-image"  >
+            </div>
+
+            <div class="wrapper animate__animated animate__fadeInRight">
+                <h4 class="image-description">Result Image</h4>
+                <img src="{{ url_for('static', path='images/result.png') }}" alt="result-image">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4 animate__animated animate__fadeInUp">
+            <a href="/" class="btn btn-primary">Home</a>
+            <a href="{{ url_for('static', path='images/result.png') }}" class="btn btn-dark">Download Result</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
