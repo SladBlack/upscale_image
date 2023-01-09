@@ -14,7 +14,7 @@ class Predict:
     def __init__(self, file: UploadFile, base_path: Path):
         self.file = file
         self.file_location = f"{base_path}/static/images/source.png"
-        self.model_path = f"{base_path}/model.h5"
+        self.model_path = f"{base_path}/final_model.h5"
         self.result_path = f'{base_path}/static/images/result.png'
 
     def save_image(self) -> None:
